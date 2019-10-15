@@ -1,6 +1,0 @@
-D:\Skillup\msmq\msmq\msmq\bin\Debug\msmq.exe.config
-D:\Skillup\msmq\msmq\msmq\bin\Debug\msmq.exe
-D:\Skillup\msmq\msmq\msmq\bin\Debug\msmq.pdb
-D:\Skillup\msmq\msmq\msmq\obj\Debug\LogReaderSystem.csprojResolveAssemblyReference.cache
-D:\Skillup\msmq\msmq\msmq\obj\Debug\msmq.exe
-D:\Skillup\msmq\msmq\msmq\obj\Debug\msmq.pdb
