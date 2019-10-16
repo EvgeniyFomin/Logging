@@ -1,6 +1,8 @@
 ﻿using logReaderSystem.eventLogs;
 using LogReaderSystem.msmq;
+using System;
 using System.Messaging;
+using msmq.eventLogs;
 
 namespace LogReaderSystem
 {
@@ -8,6 +10,8 @@ namespace LogReaderSystem
     {
         static void Main(string[] args)
         {
+            var events = SSISTxtLogReader.GetAllEventLogs();
+            
 
             string path = @".\Private$\ddddd";
            // string path = "FormatName:Direct=TCP:10.10.42.208\\nixQueue";

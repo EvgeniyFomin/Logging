@@ -18,12 +18,15 @@ namespace LogReaderSystem.msmq
 
         public void ReadMessageToConsole()
         {
-           var messages = this.msmq.GetAllMessages();
+            Console.WriteLine("Getting all messages...");
+            Message[] messages = this.msmq.GetAllMessages();
             //Console.WriteLine($"Queue label = {this.msmq.Label}, sender pc name = fpfasfjk");
+            Console.WriteLine($"Found {messages.Count()} messages");
             foreach (Message msg in messages)
             {
                 if (messages.Count() > 0)
                     Console.WriteLine($"Body = {msg.Body}, label = {msg.Label}");
+                break;
             }
             // msmq.Purge();
         }
