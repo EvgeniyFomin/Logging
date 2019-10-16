@@ -1,0 +1,6 @@
+
+*.cache
+/logReaderSystem/bin/
+.vs/
+packages/
+**/obj/

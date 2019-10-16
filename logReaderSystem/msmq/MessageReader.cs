@@ -18,7 +18,7 @@ namespace LogReaderSystem.msmq
 
         public void ReadMessageToConsole()
         {
-            Message[] messages = this.msmq.GetAllMessages();
+           var messages = this.msmq.GetAllMessages();
             //Console.WriteLine($"Queue label = {this.msmq.Label}, sender pc name = fpfasfjk");
             foreach (Message msg in messages)
             {

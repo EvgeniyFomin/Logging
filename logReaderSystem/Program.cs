@@ -9,33 +9,34 @@ namespace LogReaderSystem
         static void Main(string[] args)
         {
 
-            // //string path = @".\Private$\SomeTestName";
-            string path = "FormatName:Direct=TCP:10.10.42.208\\nixQueue";
+            string path = @".\Private$\ddddd";
+           // string path = "FormatName:Direct=TCP:10.10.42.208\\nixQueue";
+            //string path = "FormatName:Direct=TCP:10.234.22.217\\testqueue";
 
             MessageQueue messageQueue = null;
-            // //if (MessageQueue.Exists(path))
-            // //{
-            // //    messageQueue = new MessageQueue(path);
-            // //    messageQueue.Label = "Existing queue";
-            // //}
-            // //else
-            // //{
-            // //    // Create the Queue
-            // //    MessageQueue.Create(path);
-            // //    messageQueue = new MessageQueue(path);
-            // //    messageQueue.Label = "Newly Created Queue";
-            // //}
+            //if (MessageQueue.Exists(path))
+            //{
+            //    messageQueue = new MessageQueue(path);
+            //    messageQueue.Label = "Existing queue";
+            //}
+            //else
+            //{
+            //    // Create the Queue
+            //    MessageQueue.Create(path);
+            //    messageQueue = new MessageQueue(path);
+            //    messageQueue.Label = "Newly Created Queue";
+            //}
             messageQueue = new MessageQueue(path);
             MessageWriter mswrtr = new MessageWriter(messageQueue);
             EventLogReader eventReader = new EventLogReader();
             var msg = eventReader.ReadEventLog(1);
             mswrtr.WriteMessage(msg);
 
-            // //mswrtr.WriteMessage("That's awesome to work with MSMQ");
-            // for (int i = 0; i <= 20; i++)
-            // {
-            //     mswrtr.WriteMessage($"{i} message to check");
-            // }
+           // mswrtr.WriteMessage("That's awesome to work with MSMQ");
+            //for (int i = 0; i <= 20; i++)
+            //{
+            //    mswrtr.WriteMessage($"{i} message to check");
+            //}
 
 
             MessageReader msrdr = new MessageReader(messageQueue);
