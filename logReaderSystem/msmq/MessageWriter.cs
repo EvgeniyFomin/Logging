@@ -18,7 +18,8 @@ namespace LogReaderSystem.msmq
 
         public void WriteMessage(string message)
         {
-            this.msmq.Send(message, "From console app");
+            Console.WriteLine("Sending message to queue");
+            this.msmq.Send(message, "ololabel");
         }
 
     }

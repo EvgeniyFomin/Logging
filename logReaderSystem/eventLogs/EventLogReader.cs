@@ -26,8 +26,17 @@ namespace logReaderSystem.eventLogs
         }
         public string ReadEventLog(int number)
         {
-            if (log.Entries.Cast<EventLogEntry>().Count() >= number)
-                return log.Entries.Cast<EventLogEntry>().ToList()[number].Message;
+            if (log.Entries.Count >= number)
+            {
+                foreach (var entry in log.Entries.Cast<EventLogEntry>())
+                {
+                    if (number == 0)
+                        return entry.Message;
+                    else
+                        number--;
+                }
+                return String.Empty;
+            }
             else return String.Empty;
         }
     }
